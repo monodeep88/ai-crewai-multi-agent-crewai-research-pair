@@ -1,0 +1,1 @@
+Facilitate team collaboration and communication using the Collaboration Module.
