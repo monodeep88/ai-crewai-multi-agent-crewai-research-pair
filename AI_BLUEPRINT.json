@@ -1,0 +1,150 @@
+{
+  "mode": "ai",
+  "project_title": "CrewAI Research Pair",
+  "short_description": "A multi-agent system for research collaboration and knowledge sharing",
+  "domain_summary": "{'topic': 'Research Collaboration', 'description': 'A system for researchers to collaborate, share knowledge, and track progress', 'stakeholders': ['Researchers', 'Institutions', 'Funders'], 'goals': ['Improved collaboration', 'Enhanced knowledge sharing', 'Increased productivity']}",
+  "user_persona": "Dr. Emma Taylor: A scientist working on a project to develop a new treatment for a rare disease",
+  "architecture_notes": [
+    "Use a graph database to store and link research knowledge",
+    "Implement a microservices architecture for scalability and flexibility",
+    "Use API-based communication between components"
+  ],
+  "backend_modules": [
+    "Research Hub API: API for interacting with the Research Hub",
+    "Knowledge Graph API: API for interacting with the Knowledge Graph",
+    "Collaboration Module API: API for interacting with the Collaboration Module"
+  ],
+  "frontend_features": [
+    "Research Dashboard: Dashboard for viewing and managing research projects",
+    "Knowledge Graph Explorer: Tool for exploring and linking research knowledge",
+    "Collaboration Workspace: Workspace for team collaboration and communication"
+  ],
+  "data_sources": [
+    "Research Hub Database: Database storing research project data",
+    "Knowledge Graph Database: Database storing research knowledge data",
+    "Collaboration Module Database: Database storing team collaboration data"
+  ],
+  "testing_strategy": [
+    "{'types': ['Unit testing', 'Integration testing', 'End-to-end testing'], 'tools': ['Pytest', 'Jest', 'Cypress']}"
+  ],
+  "starter_questions": [
+    "What are the key features of the Research Hub?",
+    "How will the Knowledge Graph be populated?",
+    "What is the workflow for team collaboration?"
+  ],
+  "workflow_steps": [
+    "Research Project Setup: Create a new research project and set up the Research Hub",
+    "Knowledge Graph Population: Populate the Knowledge Graph with relevant research knowledge",
+    "Team Collaboration: Facilitate team collaboration and communication using the Collaboration Module"
+  ],
+  "business_rules": [
+    "{'rule': 'Research projects must be approved by the institution before being published'}",
+    "{'rule': 'Knowledge Graph data must be regularly updated to ensure accuracy'}",
+    "{'rule': 'Team collaboration data must be stored securely to maintain confidentiality'}"
+  ],
+  "sample_documents": [
+    {
+      "filename": "research_project_setup.md",
+      "content": "Create a new research project and set up the Research Hub."
+    },
+    {
+      "filename": "knowledge_graph_population.md",
+      "content": "Populate the Knowledge Graph with relevant research knowledge."
+    },
+    {
+      "filename": "team_collaboration.md",
+      "content": "Facilitate team collaboration and communication using the Collaboration Module."
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "Research Hub",
+      "description": "Centralized platform for research collaboration"
+    },
+    {
+      "name": "Knowledge Graph",
+      "description": "Graph database for storing and linking research knowledge"
+    },
+    {
+      "name": "Collaboration Module",
+      "description": "Module for facilitating team collaboration and communication"
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "Use a graph database to store and link research knowledge",
+        "Implement a microservices architecture for scalability and flexibility",
+        "Use API-based communication between components"
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "Research Hub API: API for interacting with the Research Hub",
+        "Knowledge Graph API: API for interacting with the Knowledge Graph",
+        "Collaboration Module API: API for interacting with the Collaboration Module"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "Research Dashboard: Dashboard for viewing and managing research projects",
+        "Knowledge Graph Explorer: Tool for exploring and linking research knowledge",
+        "Collaboration Workspace: Workspace for team collaboration and communication"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "{'types': ['Unit testing', 'Integration testing', 'End-to-end testing'], 'tools': ['Pytest', 'Jest', 'Cypress']}"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Research Project Setup: Create a new research project and set up the Research Hub",
+        "Knowledge Graph Population: Populate the Knowledge Graph with relevant research knowledge",
+        "Team Collaboration: Facilitate team collaboration and communication using the Collaboration Module"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "CrewAI Research Operations Crew",
+  "architecture_template_id": 52,
+  "architecture_template_path": "templates/crewai-multi-agent/crewai-research-operations-crew",
+  "architecture_description": "CrewAI Research Operations Crew for CrewAI-style role-based research delegation.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
